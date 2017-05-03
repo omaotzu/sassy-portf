@@ -11,7 +11,7 @@ $(function () {
   function scrollToSection() {
     var section = $(this).attr('href');
     $('body').animate({
-      scrollTop: $(section).offset().top
+      scrollTop: $(section).offset().top - 100
     }, 1000, function () {
       if ($window.width() < 575) {
         $('.dropdown').slideToggle();
