@@ -1,5 +1,5 @@
 $(() => {
-  
+
   const $window = $(window);
   const $links = $('nav a');
   const $header = $('header');
@@ -19,7 +19,7 @@ $(() => {
   function scrollToSection() {
     const section = $(this).attr('href');
     $('body').animate( {
-      scrollTop: $(section).offset().top -94.5
+      scrollTop: $(section).offset().top -75
     }, 1000, () => {
       if ($window.width() < 575) {
         $('.dropdown').slideToggle();
