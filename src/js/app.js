@@ -1,4 +1,5 @@
 $(() => {
+  
   const $window = $(window);
   const $links = $('nav a');
   const $header = $('header');
@@ -28,31 +29,31 @@ $(() => {
 
 
   function makeVisisble1(){
-    $content1.toggleClass('visible');
-    $content2.removeClass('visible');
-    $content3.removeClass('visible');
-    $content4.removeClass('visible');
+    $content1.fadeToggle('slow');
+    $content2.fadeOut('slow');
+    $content3.fadeOut('slow');
+    $content4.fadeOut('slow');
   }
 
   function makeVisisble2(){
-    $content2.toggleClass('visible');
-    $content1.removeClass('visible');
-    $content3.removeClass('visible');
-    $content4.removeClass('visible');
+    $content2.fadeToggle('slow');
+    $content1.fadeOut('slow');
+    $content3.fadeOut('slow');
+    $content4.fadeOut('slow');
   }
 
   function makeVisisble3(){
-    $content3.toggleClass('visible');
-    $content1.removeClass('visible');
-    $content2.removeClass('visible');
-    $content4.removeClass('visible');
+    $content3.fadeToggle('slow');
+    $content1.fadeOut('slow');
+    $content2.fadeOut('slow');
+    $content4.fadeOut('slow');
   }
 
   function makeVisisble4(){
-    $content4.toggleClass('visible');
-    $content1.removeClass('visible');
-    $content2.removeClass('visible');
-    $content3.removeClass('visible');
+    $content4.fadeToggle('slow');
+    $content1.fadeOut('slow');
+    $content2.fadeOut('slow');
+    $content3.fadeOut('slow');
   }
 
   function updateHeader() {
