@@ -40,7 +40,7 @@ header {
         a{
           text-decoration: none;
           color: $maroon;
-          &:active{
+          &:hover, :active{
             text-decoration: underline;
             color: black;
           }
@@ -100,7 +100,7 @@ section {
     padding: 0 40px;
     width: 80%;
     text-align: left;
-    margin: 0;
+    margin: 0 auto;
     font-size: 24px;
     p{
       text-align: justify;
@@ -108,6 +108,7 @@ section {
   }
   #contact{
     ul{
+      padding-top: 10px;
       list-style: none;
       li{
         display: inline;
@@ -159,22 +160,30 @@ section {
 
 .title1, .title2, .title3, .title4{
   width: 80%;
-  height: 180px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/placeholder.jpg');
+  height: 200px;
   background-size: cover;
   float: right;
   margin-right: 40px;
   margin-bottom: 20px;
+  border: 1px solid $gold;
   h4{
     color: lighten($maroon, 10%);
     margin: 0;
-    background-color: rgba(250, 250, 250, 0.4);
+    background-color: rgba(250, 250, 250, 0.9);
   }
   &:hover{
     cursor: pointer;
   }
 }
-
+.title1{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/project1/Name_That_Tune_img1.png');
+}
+.title2{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/project2/FishBook_img1.png');
+}
+.title3{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/project3/pncapp_img1.png');
+}
 .content1, .content2, .content3, .content4{
   z-index: 2;
   background-color: $gold;
@@ -185,17 +194,31 @@ section {
   width: 45%;
   display: none;
   margin-left: 30px;
-  height: 800px;
+  height: 850px;
   h5{
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 25px;
+    font-weight: bold;
   }
   p{
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 25px;
+  }
+  h4{
+    text-align: right;
+    margin-right: 20px;
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 
+.caroImage{
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 .icon {
   height: 50px;
   width: 50px;
@@ -207,10 +230,14 @@ table{
 }
 
 .upcoming{
+  padding-top: 100px;
   table{
     padding-top: 20px;
     text-align: center;
     tr{
+      th{
+        text-align: center;
+      }
       td{
         img{
           margin: 0 auto;
@@ -219,7 +246,27 @@ table{
     }
   }
 }
+.buttons{
+  text-align: center;
+  margin-top: 5px;
+  a{
+    button{
+      margin-right: 10px;
+      border: 2px solid $maroon;
+      border-radius: 15px;
+      padding: 5px;
+      background-color: $gold;
+      color: $maroon;
+      &:hover{
+        cursor: pointer;
+        border: 2px solid $gold;
+        background-color: $maroon;
+        color: $gold;
+      }
 
+    }
+  }
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -230,15 +277,16 @@ table{
       ul {
         li {
           font-size: 18px;
+          margin-bottom: 5px;
           display: block;
           float: none;
-          text-align: right;
+          text-align: left;
           &.menu {
             display: block;
           }
           &:first-child{
-            margin: auto;
-            padding: auto;
+            margin: 0;
+            padding: 0;
           }
         }
         .dropdown {
@@ -304,7 +352,24 @@ table{
       text-align: center;
       font-size: 12px;
     }
+
   }
+
+  .upcoming{
+    padding-top: 20px;
+    table{
+      padding-top: 20px;
+      text-align: center;
+      tr{
+        td{
+          img{
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
   #projects{
     width: 100%;
     height: 50%;
@@ -325,5 +390,47 @@ table{
     width: 100%;
     margin: 20px auto;
     text-align: center;
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  .content1, .content2, .content3, .content4{
+    z-index: 2;
+    margin: 0;
+    background-color: $gold;
+    color: $maroon;
+    text-align: left;
+    width: 100%;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    h5{
+      margin-top: 10px;
+      padding: 25px;
+    }
+    p{
+      margin-top: 20px;
+      padding: 25px;
+      font-size: 12px;
+    }
+  }
+
+  .content3, .content4{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 60px;
+  }
+
+  .caroImage{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
   }
 }

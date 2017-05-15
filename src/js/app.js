@@ -16,7 +16,7 @@ $(() => {
   const $content3 = $('.content3');
   const $content4 = $('.content4');
 
-
+  const $close = $('.close');
 
 
   function toggleMenu() {
@@ -27,7 +27,7 @@ $(() => {
     const section = $(this).attr('href');
     if ($window.width() < 575) {
       $('body').animate( {
-        scrollTop: $(section).offset().top -52
+        scrollTop: $(section).offset().top -48
       }, 1000, () => {
         $('.dropdown').slideToggle();
       });
@@ -67,6 +67,12 @@ $(() => {
     $content2.fadeOut('slow');
     $content3.fadeOut('slow');
   }
+  function makeInvisible(){
+    $content1.fadeOut('slow');
+    $content2.fadeOut('slow');
+    $content3.fadeOut('slow');
+    $content4.fadeOut('slow');
+  }
 
   function updateHeader() {
     const bottomOfHeader = $header.offset().top + $header.height();
@@ -86,4 +92,5 @@ $(() => {
   $title2.on('click', makeVisisble2);
   $title3.on('click', makeVisisble3);
   $title4.on('click', makeVisisble4);
+  $close.on('click', makeInvisible);
 });
