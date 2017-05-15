@@ -3,6 +3,8 @@ $(() => {
   const $window = $(window);
   const $links = $('nav a');
   const $header = $('header');
+  const $menu = $('.menu');
+
 
   const $title1 = $('.title1');
   const $title2 = $('.title2');
@@ -16,15 +18,25 @@ $(() => {
 
 
 
+
+  function toggleMenu() {
+    $('.dropdown').slideToggle();
+  }
+
   function scrollToSection() {
     const section = $(this).attr('href');
-    $('body').animate( {
-      scrollTop: $(section).offset().top -75
-    }, 1000, () => {
-      if ($window.width() < 575) {
+    if ($window.width() < 575) {
+      $('body').animate( {
+        scrollTop: $(section).offset().top -52
+      }, 1000, () => {
         $('.dropdown').slideToggle();
-      }
-    });
+      });
+    }else{
+      $('body').animate( {
+        scrollTop: $(section).offset().top -75
+      }, 1000, () => {
+      });
+    }
   }
 
 
@@ -69,6 +81,7 @@ $(() => {
 
   $links.on('click', scrollToSection);
   $window.scroll(updateHeader).trigger('scroll');
+  $menu.on('click', toggleMenu);
   $title1.on('click', makeVisisble1);
   $title2.on('click', makeVisisble2);
   $title3.on('click', makeVisisble3);

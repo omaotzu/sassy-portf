@@ -5,6 +5,7 @@ $(function () {
   var $window = $(window);
   var $links = $('nav a');
   var $header = $('header');
+  var $menu = $('.menu');
 
   var $title1 = $('.title1');
   var $title2 = $('.title2');
@@ -16,15 +17,23 @@ $(function () {
   var $content3 = $('.content3');
   var $content4 = $('.content4');
 
+  function toggleMenu() {
+    $('.dropdown').slideToggle();
+  }
+
   function scrollToSection() {
     var section = $(this).attr('href');
-    $('body').animate({
-      scrollTop: $(section).offset().top - 75
-    }, 1000, function () {
-      if ($window.width() < 575) {
+    if ($window.width() < 575) {
+      $('body').animate({
+        scrollTop: $(section).offset().top - 52
+      }, 1000, function () {
         $('.dropdown').slideToggle();
-      }
-    });
+      });
+    } else {
+      $('body').animate({
+        scrollTop: $(section).offset().top - 75
+      }, 1000, function () {});
+    }
   }
 
   function makeVisisble1() {
@@ -68,6 +77,7 @@ $(function () {
 
   $links.on('click', scrollToSection);
   $window.scroll(updateHeader).trigger('scroll');
+  $menu.on('click', toggleMenu);
   $title1.on('click', makeVisisble1);
   $title2.on('click', makeVisisble2);
   $title3.on('click', makeVisisble3);

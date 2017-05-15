@@ -40,10 +40,20 @@ header {
         a{
           text-decoration: none;
           color: $maroon;
+          &:active{
+            text-decoration: underline;
+            color: black;
+          }
         }
         &:first-child{
           margin-left: 30px;
           padding: 0 10px;
+        }
+        &.menu {
+        color: $maroon;
+        cursor: pointer;
+        display: none;
+        font-size: 20px;
         }
       }
     }
@@ -78,6 +88,7 @@ section {
 
 #about{
   width: 50%;
+  max-height: 995px;
   float: right;
   h3{
     text-align: center;
@@ -86,7 +97,7 @@ section {
 
   }
   .bio{
-    padding: 40px 40px 0 40px;
+    padding: 0 40px;
     width: 80%;
     text-align: left;
     margin: 0;
@@ -95,30 +106,29 @@ section {
       text-align: justify;
     }
   }
-}
-
-#contact{
-  h3 {
-    font-size: 28px;
-  }
-  ul{
-    list-style: none;
-    li{
-      display: inline;
-      margin-right: 100px;
-      &:nth-child(2){
-        padding-left: 2px;
-      }
-      &:hover{
-        box-shadow: 0 0 5pt 5pt $gold;
+  #contact{
+    ul{
+      list-style: none;
+      li{
+        display: inline;
+        margin-right: 100px;
+        &:nth-child(2){
+          padding-left: 2px;
+        }
+        &:hover{
+          box-shadow: 0 0 5pt 5pt $gold;
+        }
       }
     }
   }
 }
 
+
+
 #tech{
-  padding: 40px;
+  padding-top: 40px;
   width: 50%;
+  float: right;
   h3{
     font-size: 28px;
     text-align: center;
@@ -136,12 +146,14 @@ section {
   height: 900px;
   width: 50%;
   float: right;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   h3{
     font-size: 28px;
-    margin: 30px 15px;
+    margin: 30px 0;
     letter-spacing: 5px;
     text-align: center;
+    position: relative;
+    transform: translate(7%, 0%);
   }
 }
 
@@ -152,10 +164,11 @@ section {
   background-size: cover;
   float: right;
   margin-right: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   h4{
     color: lighten($maroon, 10%);
     margin: 0;
+    background-color: rgba(250, 250, 250, 0.4);
   }
   &:hover{
     cursor: pointer;
@@ -172,7 +185,7 @@ section {
   width: 45%;
   display: none;
   margin-left: 30px;
-  height: 760px;
+  height: 800px;
   h5{
     margin-top: 100px;
     padding: 25px;
@@ -188,7 +201,129 @@ section {
   width: 50px;
 }
 table{
-  padding: 100px;
+  padding: 50px;
   margin: 0 auto;
   text-align: center;
+}
+
+.upcoming{
+  table{
+    padding-top: 20px;
+    text-align: center;
+    tr{
+      td{
+        img{
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  header {
+    min-height: 50px;
+    height: auto;
+    nav {
+      ul {
+        li {
+          font-size: 18px;
+          display: block;
+          float: none;
+          text-align: right;
+          &.menu {
+            display: block;
+          }
+          &:first-child{
+            margin: auto;
+            padding: auto;
+          }
+        }
+        .dropdown {
+          display: none;
+        }
+      }
+    }
+  }
+  #home {
+    width: 100%;
+    height: 50%;
+    float: none;
+    display: block;
+  }
+  #middleImage{
+    float: none;
+    height: 50%;
+    display: block;
+  }
+  #about{
+    padding-top: 20px;
+    width: 100%;
+    height: 50%;
+    float: none;
+    display: block;
+    h3{
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+    p{
+      font-size: 12px;
+    }
+    .bio{
+      padding: 10px 10px 0 10px;
+      width: 80%;
+      text-align: left;
+      margin: 0 auto;
+      p{
+        text-align: justify;
+      }
+    }
+    #contact{
+      ul{
+        li{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  #tech{
+    padding-top: 20px;
+    h3{
+      font-size: 18px;
+
+    }
+    width: 100%;
+    height: 50%;
+    display: block;
+    table{
+      padding: 20px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+  #projects{
+    width: 100%;
+    height: 50%;
+    display: block;
+    h3{
+      font-size: 18px;
+      position: relative;
+      transform: translate(0%, 0%);
+    }
+  }
+
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .title1, .title2, .title3, .title4{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
 }
