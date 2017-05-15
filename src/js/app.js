@@ -16,8 +16,9 @@ $(() => {
   const $content3 = $('.content3');
   const $content4 = $('.content4');
 
-  const $close = $('.close');
+  const $bio = $('.bio');
 
+  const $close = $('.close');
 
   function toggleMenu() {
     $('.dropdown').slideToggle();
@@ -38,7 +39,15 @@ $(() => {
       });
     }
   }
-
+  function orientation(e) {
+    if (e.orientation === 'horizontal') {
+      $bio.addClass('smallerText');
+      console.log('horizontal');
+    }else if (e.orientation === 'vertical') {
+      $bio.removeClass('smallerText');
+      console.log('vertical');
+    }
+  }
 
   function makeVisisble1(){
     $content1.fadeToggle('slow');
@@ -93,4 +102,5 @@ $(() => {
   $title3.on('click', makeVisisble3);
   $title4.on('click', makeVisisble4);
   $close.on('click', makeInvisible);
+  $window.on('orientationchange', orientation);
 });

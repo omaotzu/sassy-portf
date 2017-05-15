@@ -17,6 +17,8 @@ $(function () {
   var $content3 = $('.content3');
   var $content4 = $('.content4');
 
+  var $bio = $('.bio');
+
   var $close = $('.close');
 
   function toggleMenu() {
@@ -35,6 +37,15 @@ $(function () {
       $('body').animate({
         scrollTop: $(section).offset().top - 75
       }, 1000, function () {});
+    }
+  }
+  function orientation(e) {
+    if (e.orientation === 'horizontal') {
+      $bio.addClass('smallerText');
+      console.log('horizontal');
+    } else if (e.orientation === 'vertical') {
+      $bio.removeClass('smallerText');
+      console.log('vertical');
     }
   }
 
@@ -91,4 +102,5 @@ $(function () {
   $title3.on('click', makeVisisble3);
   $title4.on('click', makeVisisble4);
   $close.on('click', makeInvisible);
+  $window.on('orientationchange', orientation);
 });

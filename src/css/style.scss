@@ -69,7 +69,7 @@ section {
 #home {
   height: 100%;
   width: 50%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/placeholder.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/stockimage1.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -79,11 +79,11 @@ section {
 #middleImage{
   @extend #home;
   float: right;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/placeholder.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/stockimage2.jpg');
 }
 #endImage{
   @extend #home;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/placeholder.jpg')
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/stockimage3.jpg')
 }
 
 #about{
@@ -98,7 +98,7 @@ section {
   }
   .bio{
     padding: 0 40px;
-    width: 80%;
+    width: 90%;
     text-align: left;
     margin: 0 auto;
     font-size: 24px;
@@ -124,7 +124,9 @@ section {
   }
 }
 
-
+.smallerText{
+  font-style: 18px;
+}
 
 #tech{
   padding-top: 40px;
