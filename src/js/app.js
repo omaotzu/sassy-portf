@@ -42,14 +42,15 @@ $(() => {
   function orientation(e) {
     if (e.orientation === 'horizontal') {
       $bio.addClass('smallerText');
-      console.log('horizontal');
     }else if (e.orientation === 'vertical') {
       $bio.removeClass('smallerText');
-      console.log('vertical');
     }
   }
 
   function makeVisisble1(){
+    if ($window.width() < 800) {
+      $('body').css({'overflow-y': 'hidden'});
+    }
     $content1.fadeToggle('slow');
     $content2.fadeOut('slow');
     $content3.fadeOut('slow');
@@ -57,6 +58,9 @@ $(() => {
   }
 
   function makeVisisble2(){
+    if ($window.width() < 800) {
+      $('body').css({'overflow-y': 'hidden'});
+    }
     $content2.fadeToggle('slow');
     $content1.fadeOut('slow');
     $content3.fadeOut('slow');
@@ -64,6 +68,9 @@ $(() => {
   }
 
   function makeVisisble3(){
+    if ($window.width() < 800) {
+      $('body').css({'overflow-y': 'hidden'});
+    }
     $content3.fadeToggle('slow');
     $content1.fadeOut('slow');
     $content2.fadeOut('slow');
@@ -71,12 +78,16 @@ $(() => {
   }
 
   function makeVisisble4(){
+    if ($window.width() < 800) {
+      $('body').css({'overflow-y': 'hidden'});
+    }
     $content4.fadeToggle('slow');
     $content1.fadeOut('slow');
     $content2.fadeOut('slow');
     $content3.fadeOut('slow');
   }
   function makeInvisible(){
+    $('body').css({'overflow-y': 'scroll'});
     $content1.fadeOut('slow');
     $content2.fadeOut('slow');
     $content3.fadeOut('slow');
