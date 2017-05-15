@@ -2,6 +2,7 @@ $maroon: #871F02;
 $gold: #D9D1BE;
 
 body{
+  width: 100%;
   background-color: black;
   color: $gold;
   text-align: center;
@@ -55,19 +56,6 @@ section {
 }
 
 
-#maintenance{
-  h3{
-    font-size: 28px;
-  }
-  p{
-    font-size: 24px;
-  }
-}
-.maintenance{
-  width: 500px;
-  height: 500px;
-}
-
 #home {
   height: 100%;
   width: 50%;
@@ -94,15 +82,15 @@ section {
   h3{
     text-align: center;
     font-size: 28px;
-    margin: 15px;
+    margin-top: 90px;
+
   }
   .bio{
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     width: 80%;
     text-align: left;
     margin: 0;
     font-size: 24px;
-
     p{
       text-align: justify;
     }
@@ -110,7 +98,6 @@ section {
 }
 
 #contact{
-  padding-top: 30px;
   h3 {
     font-size: 28px;
   }
@@ -130,12 +117,12 @@ section {
 }
 
 #tech{
-  padding-top: 30px;
+  padding: 40px;
   width: 50%;
   h3{
     font-size: 28px;
     text-align: center;
-    margin: 15px 15px;
+    margin: 0 15px;
   }
   font-size: 24px;
   ul{
@@ -145,7 +132,7 @@ section {
 }
 
 #projects{
-  padding-top: 30px;
+  padding-top: 10px;
   height: 900px;
   width: 50%;
   float: right;
@@ -199,4 +186,9 @@ section {
 .icon {
   height: 50px;
   width: 50px;
+}
+table{
+  padding: 100px;
+  margin: 0 auto;
+  text-align: center;
 }
